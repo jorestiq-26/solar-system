@@ -102,7 +102,7 @@ jobs:
         with:
           context: .
           push: false
-          tags: joro.kostov/solar-system
+          tags: joro.kostov/solar-system:${{ github.sha }}
 
       - name: Docker Image Testing
         run: |
