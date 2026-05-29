@@ -182,5 +182,12 @@ jobs:
           echo ----------------------------------------------------
           kubectl get nodes
 
-
-        
+      - name: Replace Token in manifest files
+        uses: cschleiden/replace-tokens@v1
+        with:
+          tokenPrefix: '{'
+          tokenSuffix: '}'
+          files: '["**/*.js"]'
+        env:
+          CDN: https://somecdn.com/...
+         
