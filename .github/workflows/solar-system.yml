@@ -162,7 +162,7 @@ jobs:
     needs: docker
     environment: 
       name: development
-      url: https://${{ steps.step1.outputs.APP_INGRESS_HOST }}
+      url: https://${{ steps.step1.outputs.APP_INGRESS_HOST }}:31375
     outputs: 
       APP_INGRESS_URL: ${{ steps.step1.outputs.APP_INGRESS_HOST }}
     runs-on: self-hosted
