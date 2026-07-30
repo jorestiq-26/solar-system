@@ -169,7 +169,6 @@ jobs:
       mongodb-uri: ${{ vars.MONGO_URI }}
       environment: development
       k8s-manifest-dir: kubernetes/development/
-
   dev-integration-test:
     if: contains(github.ref, 'feature/')
     name: Dev Integration Testing
@@ -195,7 +194,6 @@ jobs:
       mongodb-uri: ${{ vars.MONGO_URI }}
       envirement: production
       k8s-manifest-dir: kubernetes/production/
-
   prod-integration-test:
     if: github.ref == 'refs/heads/main'
     name: Prod Integration Testing
